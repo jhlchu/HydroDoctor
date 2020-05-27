@@ -1,10 +1,14 @@
 language: node_js
+ 
 node_js:
-  - '7'
-cache:
-  directories:
-    - node_modules
+  - stable
+ 
+install:
+  - npm install
+ 
+script:
+  
 deploy:
-  provider: heroku
-  api_key:
-    secure: $HAPI
+ provider: heroku
+ api_key:
+   secure: $HAPI
